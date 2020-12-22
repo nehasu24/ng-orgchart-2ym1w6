@@ -1,0 +1,13 @@
+.action-area {
+  padding: 10px;
+}
+
+organization-chart {
+  margin: 0 auto;
+}
+
+.input {
+  display: inline-block;
+  width: unset;
+  margin-right: 1rem;
+}

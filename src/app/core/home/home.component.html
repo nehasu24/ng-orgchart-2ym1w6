@@ -1,0 +1,176 @@
+<section class="hero is-fullheight-with-navbar">
+	<div class="hero-body">
+		<div class="container has-text-centered">
+			<h1 class="title is-size-1">
+				Frontend Tech Blog
+			</h1>
+			<h2 class="subtitle">
+				We just share frontend code craft here.
+			</h2>
+
+			<a *ngIf="isLoading" class="button is-primary is-loading">Loading</a>
+			<div class="columns" *ngIf="users">
+				<div class="column" *ngFor="let user of users">
+					<div class="box">
+						<article class="media">
+							<div class="media-left">
+								<figure class="image is-64x64">
+									<img src="https://rawgit.com/dabeng/OrgChart/master/demo/img/avatar/{{user.avatar}}.jpg" alt="Image">
+                </figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p>
+										<strong>{{user.firstName}} {{user.lastName}}</strong>
+										<small>@{{user.username}}</small>
+										<br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+        </p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+
+			<div class="tile is-ancestor">
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">flexbox</p>
+						<div class="content">
+							<p>The Flexible Box Module, usually referred to as flexbox, was designed as a
+								one-dimensional layout model, and as a method that could offer space distribution
+								between items in an interface and powerful alignment capabilities. This article gives an
+								outline of the main features of flexbox, which we will be exploring in more detail in
+								the rest of these guides.</p>
+						</div>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">Promise</p>
+						<div class="content">
+							<p>This article describes the Promise constructor and the methods and properties of such
+								objects. To learn about the way promises work and how you can use them, we advise you to
+								read Using promises first. The constructor is primarily used to wrap functions that do
+								not already support promises.</p>
+						</div>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">Multi-column Layout</p>
+						<div class="content">
+							<p>The CSS Multi-column Layout Module extends the block layout mode to allow the easy definition of multiple columns of text. People have trouble reading text if lines are too long; if it takes too long for the eyes to move from the end of the one line to the beginning of the next, they lose track of which line they were on.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<div class="tile is-ancestor">
+				<div class="tile is-vertical is-8">
+					<div class="tile">
+						<div class="tile is-parent is-vertical">
+							<article class="tile is-child box">
+								<p class="title">MutationObserver</p>
+								<div class="content">
+									<p>The MutationObserver interface provides the ability to watch for changes being
+										made to the DOM tree. It is designed as a replacement for the older Mutation
+										Events feature which was part of the DOM3 Events specification.</p>
+								</div>
+							</article>
+							<article class="tile is-child box">
+								<p class="title">Template literals</p>
+								<div class="content">
+									<p>
+										Template literals are string literals allowing embedded expressions. You can use
+										multi-line strings and string interpolation features with them. They were called
+										"template strings" in prior editions of the ES2015 specification.
+									</p>
+								</div>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Cache</p>
+								<div class="content">
+									<p>
+										The Cache interface provides a storage mechanism for Request / Response object
+										pairs that are cached, for example as part of the ServiceWorker life cycle. Note
+										that the Cache interface is exposed to windowed scopes as well as workers. You
+										don't have to use it in conjunction with service workers, even though it is
+										defined in the service worker spec.
+									</p>
+                  <p>
+                    An origin can have multiple, named Cache objects. You are responsible for implementing how your script (e.g. in a ServiceWorker)  handles Cache updates. Items in a Cache do not get updated unless explicitly requested; they don’t expire unless deleted. Use CacheStorage.open() to open a specific named Cache object and then call any of the Cache methods to maintain the Cache.
+                  </p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Web Workers</p>
+							<div class="content">
+								<p>Web Workers are a simple means for web content to run scripts in background threads.
+									The worker thread can perform tasks without interfering with the user interface. In
+									addition, they can perform I/O using XMLHttpRequest (although the responseXML and
+									channel attributes are always null). Once created, a worker can send messages to the
+									JavaScript code that created it by posting messages to an event handler specified by
+									that code (and vice versa). This article provides a detailed introduction to using
+									web workers.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<div class="content">
+							<p class="title">svg</p>
+							<p class="subtitle">Scalable Vector Graphics</p>
+							<div class="content">
+								<p>Scalable Vector Graphics (SVG) is an XML-based markup language for describing two
+									dimensional based vector graphics. SVG is essentially to graphics what HTML is to
+									text.</p>
+								<p>SVG is a text-based open Web standard. It is explicitly designed to work with other
+									web standards such as CSS, DOM, and SMIL.</p>
+								<p>SVG images and their related behaviors are defined in XML text files which means they
+									can be searched, indexed, scripted and compressed. Additionally this means they can
+									be created and edited with any text editor and with drawing software. </p>
+								<p>SVG is an open standard developed by the World Wide Web Consortium (W3C) since 1999.
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<div class="tile is-ancestor">
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">Canvas</p>
+						<div class="content">
+							<p>The Canvas API provides a means for drawing graphics via JavaScript and the HTML
+								&lt;canvas&gt; element. Among other things, it can be used for animation, game graphics,
+								data visualization, photo manipulation, and real-time video processing.</p>
+						</div>
+					</article>
+				</div>
+				<div class="tile is-parent is-8">
+					<article class="tile is-child box">
+						<p class="title">IndexedDB</p>
+						<div class="content">
+							<p>IndexedDB is a low-level API for client-side storage of significant amounts of structured
+								data, including files/blobs. This API uses indexes to enable high-performance searches
+								of this data. While Web Storage is useful for storing smaller amounts of data, it is
+								less useful for storing larger amounts of structured data. IndexedDB provides a
+								solution. This is the main landing page for MDN's IndexedDB coverage — here we provide
+								links to the full API reference and usage guides, browser support details, and some
+								explanation of key concepts.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
